@@ -1,8 +1,7 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      Under the deep blue sea, Submariner wait instructions for lauch nuclear tactic weapon missiles / Take control of your pacific fleet and annihilate the threat:   
+    <!-- <h1>{{ msg }}</h1> -->
+    <p>  
       <a href="https://cryptodox.net" target="_blank" rel="noopener">Demo !</a>.
     </p>
     <p>
