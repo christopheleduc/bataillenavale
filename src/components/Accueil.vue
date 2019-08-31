@@ -1,9 +1,9 @@
 <template>
   <div class="hello">
     <!-- <h1>{{ msg }}</h1> -->
-    <p>  
+    <!-- <p>  
       <a href="https://cryptodox.net" target="_blank" rel="noopener">Demo !</a>.
-    </p>
+    </p> -->
     <p>
       Licence et conditions d'utilisation,<br>
       suivez le lien...
