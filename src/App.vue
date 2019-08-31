@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="container">
-    <img alt="Vue logo" src="./assets/paalpc0f.png">
+    <img alt="Vue logo" src="./assets/Presentation_001.jpg">
     <h1>{{ title }} </h1>
     <Accueil msg="Nuclear Global World War "/>
         <p>

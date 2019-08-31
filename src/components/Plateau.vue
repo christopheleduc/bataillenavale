@@ -119,7 +119,7 @@ border-color : $green !important;
 //display: block;
 position: relative;
 background-image: url("../assets/Ocean_003.jpg");
-opacity: 0.8;
+opacity: 0.9;
 top: 0;
 left: 0;
 bottom: 0;
