@@ -4,6 +4,12 @@
     <!-- <p>  
       <a href="https://cryptodox.net" target="_blank" rel="noopener">Demo !</a>.
     </p> -->
+      <h1 class="jumbotron-heading">{{ msg }}</h1>
+      <p class="lead text-muted">
+              Under the deep blue sea, Submariner wait instructions for lauch nuclear tactic weapon missiles / Take control of your pacific fleet and annihilate the threat:   
+      <a href="https://cryptodox.net" target="_blank" rel="noopener">Demo !</a>.
+      </p>
+      <p>
     <p>
       Licence et conditions d'utilisation,<br>
       suivez le lien...
@@ -22,7 +28,8 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
+@import '.././assets/styles/custom.scss';
 h3 {
   margin: 40px 0 0;
 }

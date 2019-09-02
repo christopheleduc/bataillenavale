@@ -1,26 +1,68 @@
 <template>
   <div id="app">
-    <div class="jumbotron">
-    <h1 class="display-4">{{ titre }} </h1>
-    <hr class="my-4">
-    <p class="lead">Pacific Sea</p>
-     <table class="tableau" >
-         <!-- <tr><td></td><td>A</td><td>B</td><td>C</td><td>D</td><td>E</td><td>F</td><td>G</td><td>H</td><td>I</td><td>J</td></tr> -->
-        <tr class="grille" >
-            <th class="grille" ></th><th v-for = "lettre in lettres" v-bind:key="lettre.id" class="grille" ><font color="#2fa1e4">{{ lettre.l }}</font></th>
-        </tr>
-        <tr v-for = "chiffre in chiffres" v-bind:key="chiffre.id" class="grille" >
-            <td class="grille" ><font color="#2fa1e4">{{ chiffre.c }}</font></td>
-            <td v-for = "chiffre in chiffres" v-bind:key="chiffre.id" class="grille" ></td>
-            <!-- <td v-if="cible.position == 'SSN'" style="color:red;" v-show="cible.display == true" >
-                {{ cible.position }}
-            </td>
-            <td v-else v-show="cible.display == true">
-                {{ cible.position }}
-            </td> -->
-        </tr>
-    </table>
-    <input v-model="title">
+    <div class="jumbotron text-center">
+      <h1 class="display-4">{{ titre }} </h1>
+      <hr class="my-4">
+
+      <div class="album py-5 bg-light">
+        <div class="container-fluid">
+          <div class="row">
+
+            <div class="col-md-3 text-center">
+              <div class="card mb-2 shadow-sm pt-3 pl-5">
+                <form>
+                  <div class="form-group row pl-5">
+                    <label for="firstName" >{{ greetings }}</label>
+                  </div>
+                  <div class="form-group row pl-5">
+                    <input 
+                    class="form-control col-md-8 pt-1 text-center" 
+                    type="text" 
+                    id="firstName" 
+                    placeholder="Joueur01" 
+                    v-model="firstName" 
+                    v-on:keydown.enter="displayGreetings = false" 
+                    />
+                  </div>
+                  <div class="form-group row pl-5">
+                    <p v-if="firstName">Joueur 01: {{ firstName }} !</p>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card mb-4 shadow-sm">
+                <!-- <img alt="Vue logo" src="./assets/Presentation_001.jpg"> -->
+                <p class="lead">Pacific Sea</p>
+                <table class="tableau" >
+                <!-- <tr><td></td><td>A</td><td>B</td><td>C</td><td>D</td><td>E</td><td>F</td><td>G</td><td>H</td><td>I</td><td>J</td></tr> -->
+                  <tr class="grille" >
+                    <th class="grille" ></th><th v-for = "lettre in lettres" v-bind:key="lettre.id" class="grille" ><font color="#2fa1e4">{{ lettre.l }}</font></th>
+                  </tr>
+                  <tr v-for = "chiffre in chiffres" v-bind:key="chiffre.id" class="grille" >
+                    <td class="grille" ><font color="#2fa1e4">{{ chiffre.c }}</font></td>
+                    <td v-for = "chiffre in chiffres" v-bind:key="chiffre.id" class="grille" ></td>
+                    <!-- <td v-if="cible.position == 'SSN'" style="color:red;" v-show="cible.display == true" >
+                    {{ cible.position }}
+                    </td>
+                    <td v-else v-show="cible.display == true">
+                    {{ cible.position }}
+                    </td> -->
+                </tr>
+                </table>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card mb-4 shadow-sm">
+              </div>
+            </div>
+
+          </div>
+    <!-- <input v-model="title"> -->
+        </div>
+      </div>
+
+
       <hr class="my-4">
       <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
       <p class="lead">
@@ -35,7 +77,10 @@
 module.exports = {
   data: function() {
        return {
-          titre: 'Operational theatre',
+          titre: 'Operational theater',
+          greetings: 'Hé ! Salut... Quel est ton nom ?',
+          firstName: '',
+          displayGreetings: true,
           coordonees: [
             { id: 1, position: 'A5', type: 'SNLE', display:true },
             { id: 2, position: 'B3', type: 'SNLE', display:true },
