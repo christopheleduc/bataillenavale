@@ -31,6 +31,8 @@
             </div>
 
             <CuirJeanBartD />
+            <!-- <CuirJeanBartD v-if="displayShip"/> -->
+            <!-- <PanelGauche v-on:greetingsFinished="displayShip = true" /> -->
 
             <PanelDroit />
 
@@ -63,6 +65,7 @@ export default {
   data: function() {
        return {
           titre: 'Operational theater',
+          displayShip: false,
           coordonees: [
               { id: 1, position: 'A5', type: 'SNLE', display:true },
               { id: 2, position: 'B3', type: 'SNLE', display:true },
