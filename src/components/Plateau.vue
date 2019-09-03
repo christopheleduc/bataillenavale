@@ -8,23 +8,7 @@
         <div class="container-fluid">
           <div class="row">
 
-            <div class="col-md-3 text-center">
-              <div class="card mb-2 shadow-sm pt-3 pl-5">
-                <form>
-                  <div class="form-group row pl-5">
-                    <label for="firstName">{{ greetings }}</label>
-                  </div>
-                  <div class="form-group row pl-5">
-                    <input class="form-control col-md-8 pt-1 text-center" type="text" id="firstName"
-                      placeholder="Joueur01" v-model="firstName" v-on:keydown.enter="displayGreetings = false" />
-                  </div>
-                  <div class="form-group row pl-5">
-                    <p v-if="firstName">Joueur 01: {{ firstName }} !</p>
-
-                  </div>
-                </form>
-              </div>
-            </div>
+            <PanelGauche />
 
             <div class="col-md-6">
               <div class="card mb-4 shadow-sm">
@@ -46,12 +30,9 @@
               </div>
             </div>
 
-            <CuirJeanBart />
+            <CuirJeanBartD />
 
-            <div class="col-md-3">
-              <div class="card mb-4 shadow-sm">
-              </div>
-            </div>
+            <PanelDroit />
 
           </div>
         </div>
@@ -69,18 +50,19 @@
 </template>
 
 <script>
-import CuirJeanBart from './friendly_ships/CuirJeanBart'
+import PanelGauche from './PanelGauche'
+import PanelDroit from './PanelDroit'
+import CuirJeanBartD from './friendly_ships/CuirJeanBartD'
 
 export default {
   components: {
-    CuirJeanBart,
+    PanelGauche,
+    PanelDroit,
+    CuirJeanBartD,
     },
   data: function() {
        return {
           titre: 'Operational theater',
-          greetings: 'Hé ! Salut... Quel est ton nom ?',
-          firstName: '',
-          displayGreetings: true,
           coordonees: [
               { id: 1, position: 'A5', type: 'SNLE', display:true },
               { id: 2, position: 'B3', type: 'SNLE', display:true },
