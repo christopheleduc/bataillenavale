@@ -5,31 +5,31 @@ red:
 ed1565
 
 
-Cuirasser:
+Cuirassé 5:
 	Jean Bart
 	
-Cuirasser léger:
+Cuirassé léger 4:
 	Jean d'Arc
 	
 
-Croiseur lourd:
+Croiseur lourd 3:
 	Dunkerque
 	Richelieu
 
-Destroyer:
+Destroyer 2:
 	Drayton
 	Jaguar
 
 
-Torpilleur:
+Torpilleur 1:
 	Torpedo Boat
 
 
-porte-avions:
+porte-avions 4:
 	Gerald R Ford
 	Ronald Reagan
 
-Sous-marins:
+Sous-marins 1:
 	Gato
 	George Washinton
 	Lafayette
