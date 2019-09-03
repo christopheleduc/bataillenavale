@@ -1,0 +1,39 @@
+blue:
+2346eb
+
+red:
+ed1565
+
+
+Cuirasser:
+	Jean Bart
+	
+Cuirasser léger:
+	Jean d'Arc
+	
+
+Croiseur lourd:
+	Dunkerque
+	Richelieu
+
+Destroyer:
+	Drayton
+	Jaguar
+
+
+Torpilleur:
+	Torpedo Boat
+
+
+porte-avions:
+	Gerald R Ford
+	Ronald Reagan
+
+Sous-marins:
+	Gato
+	George Washinton
+	Lafayette
+	Ohio
+	Seawolf
+	Trench
+
