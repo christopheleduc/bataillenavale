@@ -18,6 +18,6 @@ export default {
   transform: translate(-50%, -50%);
 } */
 div img {
-  height: 58px;
+  height: 28px;
 }
 </style>

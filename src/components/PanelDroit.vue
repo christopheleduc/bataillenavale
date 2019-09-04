@@ -82,6 +82,8 @@ export default {
         CroiRichelieuD,
         DestDraytonC,
         DestDraytonD,
+        DestJaguarC,
+        DestJaguarD,
         PortGeraldRFordC,
         PortGeraldRFordD,
         PortRonaldReaganC,
