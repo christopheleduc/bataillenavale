@@ -30,10 +30,10 @@
               </div>
             </div>
 
-            <CuirJeanBartD />
+            <!-- <CuirJeanBartD /> -->
             <!-- <CuirJeanBartD v-if="displayShip"/> -->
             <!-- <PanelGauche v-on:greetingsFinished="displayShip = true" /> -->
-
+            
             <PanelDroit />
 
           </div>

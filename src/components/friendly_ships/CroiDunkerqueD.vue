@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img alt="Vue logo" src="../.././assets/n_c_friendly_jean_bart_d.jpg">
+    <img alt="Vue logo" src="../.././assets/n_cl_friendly_dunkerque_d.jpg">
   </div>
 </template>
 
@@ -13,7 +13,7 @@ export default {
 <style scoped>
 /* div {
   position: absolute;
-  top: 48.5%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 } */

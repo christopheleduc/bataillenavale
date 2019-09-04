@@ -6,6 +6,7 @@ import BootstrapVue from 'bootstrap-vue'
 // import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import VueTimeago from 'vue-timeago'
+import InfiniteLoading from 'vue-infinite-loading';
 
 Vue.config.productionTip = false
 Vue.use(PortalVue)
@@ -20,6 +21,16 @@ Vue.use(VueTimeago, {
     // ja: require('date-fns/locale/ja')
   }
 })
+Vue.use(InfiniteLoading, {
+  props: {
+    spinner: 'default',
+    /* other props need to configure */
+  },
+  system: {
+    throttleLimit: 50,
+    /* other settings need to configure */
+  },
+});
 
 new Vue({
   router,
