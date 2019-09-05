@@ -1,7 +1,7 @@
 <template>
 <div class="col-md-3 text-center">
     <div class="card mb-2 shadow-sm pt-3 pl-5">
-        <form>
+        <!-- <form> -->
             <div class="form-group row pl-5" v-if="displayGreetings">
                 <label for="firstName">{{ greetings }}</label>
             </div>
@@ -16,7 +16,7 @@
             <div class="form-group row pl-5">
                 <p v-if="firstName">Joueur 01: {{ firstName }} !</p>
             </div>
-        </form>
+        <!-- </form> -->
     </div>
 </div>
 </template>
