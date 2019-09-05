@@ -10,13 +10,17 @@
                 type="text" id="firstName" 
                 placeholder="Joueur01" 
                 v-model="firstName" 
-                v-on:keydown.enter="displayGreetings = false" 
+                v-on:keydown.enter="firstNameSubmit()"
                 />
             </div>
             <div class="form-group row pl-5">
                 <p v-if="firstName">Joueur 01: {{ firstName }} !</p>
             </div>
+            <div class="form-group row pl-5">
+                <p v-if="!displayGreetings">Positionnez vos batiments !</p>
+            </div>
         <!-- </form> -->
+        <!-- <PanelGauche v-on:greetingsFinished="displayShip = true" /> -->
     </div>
 </div>
 </template>
@@ -31,6 +35,12 @@ export default {
           firstName: '',
           displayGreetings: true,
         }
+  },
+  methods: {
+      firstNameSubmit() {
+          this.displayGreetings = false;
+          this.$emit('greetingsFinished')
+      },
   },
   mounted() {
       if (localStorage.firstName) {

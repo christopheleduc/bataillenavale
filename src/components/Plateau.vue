@@ -8,7 +8,7 @@
         <div class="container-fluid">
           <div class="row">
 
-            <PanelGauche />
+            <PanelGauche v-on:greetingsFinished="displayShip = true"/>
 
             <div class="col-md-6">
               <div class="card mb-4 shadow-sm">
@@ -27,12 +27,16 @@
                     <td v-for="chiffre in chiffres" v-bind:key="chiffre.id" class="grille"></td>
                   </tr>
                 </table>
+
+                <CuirJeanBartD v-if="displayShip"/>
+                <!-- <CuirJeanBartD v-on:greetingsFinished="displayShip = true" /> -->
+
               </div>
             </div>
 
-            <!-- <CuirJeanBartD /> -->
+            
             <!-- <CuirJeanBartD v-if="displayShip"/> -->
-            <!-- <PanelGauche v-on:greetingsFinished="displayShip = true" /> -->
+            <!-- <CuirJeanBartD v-on:greetingsFinished="displayShip = true" /> -->
             
             <PanelDroit />
 

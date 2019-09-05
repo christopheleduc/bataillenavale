@@ -11,13 +11,13 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-/* div {
+div {
   position: absolute;
-  top: 48.5%;
+  top: 52.59%;
   left: 50%;
   transform: translate(-50%, -50%);
-} */
+}
 div img {
-  height: 48px;
+  height: 58px;
 }
 </style>
