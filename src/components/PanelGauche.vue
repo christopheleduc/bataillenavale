@@ -16,18 +16,23 @@
             <div class="form-group row pl-5">
                 <p v-if="firstName">Joueur 01: {{ firstName }} !</p>
             </div>
-            <div class="form-group row pl-5">
+            <!-- <div class="form-group row pl-5">
                 <p v-if="!displayGreetings">Positionnez vos batiments !</p>
-            </div>
+            </div> -->
         <!-- </form> -->
         <!-- <PanelGauche v-on:greetingsFinished="displayShip = true" /> -->
+        <StrategiePosition v-if="!displayGreetings"/>
     </div>
 </div>
 </template>
 
 <script>
+import StrategiePosition from './StrategiePosition'
 
 export default {
+    components: {
+        StrategiePosition,
+    },
   data: function() {
        return {
           titre: 'Operational theater',
