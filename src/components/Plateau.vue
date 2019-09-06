@@ -6,9 +6,18 @@
 
       <div class="album py-5 bg-light">
         <div class="container-fluid">
-          <div class="row">
+          <div class="row" 
+          ref="game" 
+          tabindex="0" 
+          v-on:keydown.up="displayShip.y -= 40" 
+          v-on:keydown.down="displayShip.y += 40" 
+          v-on:keydown.left="displayShip.x -= 40" 
+          v-on:keydown.right="displayShip.x += 40" 
+          >
 
-            <PanelGauche v-on:greetingsFinished="displayShip = true"/>
+            <PanelGauche v-on:greetingsFinished="strategiePos()"/>
+            <!-- <PanelGauche v-on:greetingsFinished="displayShip.display = true"/> -->
+            <!-- <PanelGauche v-on:greetingsFinished="displayShip = true"/> -->
 
             <div class="col-md-6">
               <div class="card mb-4 shadow-sm">
@@ -28,7 +37,9 @@
                   </tr>
                 </table>
 
-                <CuirJeanBartD v-if="displayShip"/>
+                <CuirJeanBartD v-if="displayShip.display" v-bind:x="displayShip.x" v-bind:y="displayShip.y" />
+                <!-- <CuirJeanBartD v-if="displayShip" x="417" y="446" /> -->
+                <!-- <CuirJeanBartD v-if="displayShip"/> -->
                 <!-- <CuirJeanBartD v-on:greetingsFinished="displayShip = true" /> -->
 
               </div>
@@ -69,7 +80,12 @@ export default {
   data: function() {
        return {
           titre: 'Operational theater',
-          displayShip: false,
+          displayShip: {
+            x: 417,
+            y: 447,
+            display: false,
+          },
+          // displayShip: false,
           coordonees: [
               { id: 1, position: 'A5', type: 'SNLE', display:true },
               { id: 2, position: 'B3', type: 'SNLE', display:true },
@@ -107,6 +123,13 @@ export default {
               { id: 10, c: '10' }
           ],
         }
+  },
+  methods: {
+    strategiePos() {
+      this.displayShip.display = true;
+      this.$refs.game.focus();
+    },
+    startGame() {},
   },
   mounted() {
       if (localStorage.title) {

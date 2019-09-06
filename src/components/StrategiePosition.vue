@@ -51,8 +51,15 @@
         </div>
         <div class="form-group row">
             <div class="form-group col-xs-4">
-                <button type="submit" class="btn btn-success mb-2">Insert ship position</button>
-                <button type="submit" class="btn btn-danger mb-2">Remove ship</button>
+                <button type="submit" class="btn btn-success mb-2" v-on:click="addOneShip">Insert ship position</button>
+                <button type="submit" class="btn btn-danger mb-2" v-on:click="removeOneShip">Remove ship</button>
+                <!-- <button type="submit" class="btn btn-success mb-2" v-on:click="counterShips += 1">Insert ship position</button>
+                <button type="submit" class="btn btn-danger mb-2" v-on:click="counterShips -= 1">Remove ship</button> -->
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-group pr-5">
+                <button type="submit" class="btn btn-success mb-2" v-on:click="startGame = true">Start Game</button>
             </div>
         </div>
     </div>
@@ -91,14 +98,35 @@ export default {
               {name:'Jaguar', type:'Destroyer', pos:[], selectedCases:[], size:2},
               {name:'Gerald R. Ford', type:'porte-avions', pos:[], selectedCases:[], size:4},
               {name:'Ronald Reagan', type:'porte-avions', pos:[], selectedCases:[], size:4},
-          ]
+          ],
+          counterShips: 0,
+          startGame: false,
+          choiceFinised: false,
         }
   },
   methods: {
-    //   firstNameSubmit() {
-    //       this.displayGreetings = false;
-    //       this.$emit('greetingsFinished')
-    //   },
+    addOneShip() {
+        this.counterShips += 1;
+        this.$emit('counterShips')
+    },
+    removeOneShip() {
+        this.counterShips -= 1;
+        this.$emit('counterShips')
+    },
+    endMaxShips() {
+        if (this.counterShips === 8) {
+            this.choiceFinised = true;
+            this.$emit('readyToStart')
+        }
+    },
+  },
+  computed: {
+    // endMaxShips: function() {
+    //     if (this.counterShips === 8) {
+    //         this.choiceFinised = true;
+    //         return this.$emit('readyToStart')
+    //     }
+    // },
   },
   mounted() {
     //   if (localStorage.firstName) {

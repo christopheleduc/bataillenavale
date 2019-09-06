@@ -39,6 +39,7 @@ export default {
           greetings: 'Hé ! Salut... Quel est ton nom ?',
           firstName: '',
           displayGreetings: true,
+          choiceFinised: false,
         }
   },
   methods: {
